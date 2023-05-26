@@ -27,6 +27,7 @@
 @end
 
 @implementation KeypadButton
+@synthesize subtitleLabel;
 
 - (instancetype)initWithTitle:(NSString *)title andSubtitle:(NSString *)subtitle {
     self = [super initWithFrame:CGRectMake(0, 0, KEYPAD_BUTTON_SIZE, KEYPAD_BUTTON_SIZE)];
@@ -37,10 +38,10 @@
         [self addSubview:_mainLabel];
 
         if (subtitle != nil) {
-            _subtitleLabel = [[UILabel alloc] init];
-            _subtitleLabel.text = subtitle;
-            _subtitleLabel.textAlignment = NSTextAlignmentCenter;
-            [self addSubview:_subtitleLabel];
+            subtitleLabel = [[UILabel alloc] init];
+            subtitleLabel.text = subtitle;
+            subtitleLabel.textAlignment = NSTextAlignmentCenter;
+            [self addSubview:subtitleLabel];
         }
     }
     return self;
@@ -86,13 +87,13 @@
 
     [_mainLabel sizeToFit];
 
-    if (_subtitleLabel == nil) {
+    if (subtitleLabel == nil) {
         _mainLabel.frame = CGRectMake(0, h / 2.0f - _mainLabel.bounds.size.height / 2.0f, w, _mainLabel.bounds.size.height);
     } else {
         _mainLabel.frame = CGRectMake(0, h / 6.0f, w, _mainLabel.bounds.size.height);
 
-        [_subtitleLabel sizeToFit];
-        _subtitleLabel.frame = CGRectMake(0, _mainLabel.frame.origin.y + _mainLabel.frame.size.height + 3, w, _subtitleLabel.bounds.size.height);
+        [subtitleLabel sizeToFit];
+        subtitleLabel.frame = CGRectMake(0, _mainLabel.frame.origin.y + _mainLabel.frame.size.height + 3, w, subtitleLabel.bounds.size.height);
     }
 }
 
@@ -111,8 +112,8 @@
     _textColor = textColor;
 
     _mainLabel.textColor = textColor;
-    if (_subtitleLabel != nil) {
-        _subtitleLabel.textColor = textColor;
+    if (subtitleLabel != nil) {
+        subtitleLabel.textColor = textColor;
     }
 }
 
@@ -135,8 +136,8 @@
 
     _mainLabel.textColor = _highlightTextColor;
 
-    if (_subtitleLabel != nil) {
-        _subtitleLabel.textColor = _highlightTextColor;
+    if (subtitleLabel != nil) {
+        subtitleLabel.textColor = _highlightTextColor;
     }
 }
 
@@ -161,8 +162,8 @@
     
     _mainLabel.textColor = _textColor;
     
-    if (_subtitleLabel != nil) {
-        _subtitleLabel.textColor = _textColor;
+    if (subtitleLabel != nil) {
+        subtitleLabel.textColor = _textColor;
     }
 }
 

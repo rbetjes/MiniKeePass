@@ -168,5 +168,7 @@
 			</dict>
 		</dict>
 	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>is dit het nou?</string>
 </dict>
 </plist>

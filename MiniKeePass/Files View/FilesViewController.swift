@@ -100,9 +100,9 @@ class FilesViewController: UITableViewController, NewDatabaseDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch Section.AllValues[section] {
         case .databases:
-            return NSLocalizedString("Databases", comment: "")
+            return NSLocalizedString("Robin's Databases", comment: "")
         case .keyFiles:
-            return NSLocalizedString("Key Files", comment: "")
+            return NSLocalizedString("Robin's Key Files", comment: "")
         }
     }
 
@@ -148,6 +148,7 @@ class FilesViewController: UITableViewController, NewDatabaseDelegate {
         }
 
         cell.textLabel!.text = filename
+        cell.textLabel!.textColor = UIColor.white;
 
         // Get the file's last modification time
         let databaseManager = DatabaseManager.sharedInstance()
@@ -159,7 +160,7 @@ class FilesViewController: UITableViewController, NewDatabaseDelegate {
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
         cell.detailTextLabel!.text = NSLocalizedString("Last Modified", comment: "") + ": " + dateFormatter.string(from: date!)
-
+        cell.detailTextLabel!.textColor = UIColor.white;
         return cell
     }
 
