@@ -642,7 +642,7 @@ static NSString *TextFieldCellIdentifier = @"TextFieldCell";
     hud.detailsLabel.font = [UIFont fontWithName:@"Andale Mono" size:24];
 	hud.margin = 10.f;
 	hud.removeFromSuperViewOnHide = YES;
-    [hud addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:hud action:@selector(hide:)]];
+    [hud addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:hud action:@selector(hideAnimated:)]];
 }
 
 #pragma mark - Password Generation
