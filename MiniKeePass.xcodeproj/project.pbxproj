@@ -1272,7 +1272,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G9ZT7943FZ;
 				INFOPLIST_FILE = "MiniKeePass/MiniKeePass-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jflan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1297,7 +1297,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G9ZT7943FZ;
 				INFOPLIST_FILE = "MiniKeePass/MiniKeePass-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jflan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
